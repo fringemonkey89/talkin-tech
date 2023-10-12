@@ -31,7 +31,8 @@ User.init({
         validate: {
             len: [5]
         }
-    },
+    }
+}, {
     sequelize,
     timestamps:false,
     freezeTableName: true,
