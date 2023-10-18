@@ -130,8 +130,7 @@ router.put('/:id', Auth, (req, res) => {
     })
 })
 
-
-
+module.exports = router;
 
 
 
