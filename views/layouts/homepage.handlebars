@@ -1,0 +1,14 @@
+{{#if loggedIn}}
+<h2> Welcome <a href="/profile">{{username}}</a></h2>
+{{/if}}
+{{#if posts.length}}
+<ol posts.length>
+    {{#each posts as |post|}}
+    <li>
+        {{> post-info post}}
+    </li>
+    {{/each}}
+</ol>
+{{else}}
+    <h3>no blogs over here!</h3>
+{{/if}}
