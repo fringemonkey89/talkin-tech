@@ -8,7 +8,7 @@ async function editForm (event) {
   const title = document.querySelector('').value;
   const content = document.querySelector('').value;
   
-  const repsonse = await fetch(`/api/posts/${id}`, {
+  const response = await fetch(`/api/posts/${id}`, {
     method: 'PUT',
     body: JSON.stringify({
       title,
@@ -18,11 +18,11 @@ async function editForm (event) {
       'Content-Type': 'application/json'
     }
   });
-    if(repsonse.ok) {
+    if(response.ok) {
       document.location.replace('/profile')
     } else {
       alert(response.statusText);
     }
 }
 
-document.querySelector('').addEventListener('click', editForm);
+document.querySelector('.edit-post-form').addEventListener('click', editForm);

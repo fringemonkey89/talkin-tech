@@ -24,7 +24,7 @@ async function commentForm (event) {
   }
 };
 
-document.querySelector('').addEventListener('submit', commentForm);
+document.querySelector('.comment-form').addEventListener('submit', commentForm);
 
 
 

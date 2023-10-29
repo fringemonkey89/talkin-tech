@@ -19,8 +19,8 @@ if (title && content){
      alert(response.statusText);
    }
 }else {
-  alert(please fill out the form)
+  alert('please fill out the form')
 }
 }
 
-document.querySelector('').addEventListener('submit', newForm);
+document.querySelector('.new-post-form').addEventListener('submit', newForm);
