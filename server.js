@@ -29,6 +29,7 @@ app.use(express.urlencoded({extended: true}));
 app.use(express.static(path.join(__dirname, 'public')))
 
 app.engine('handlebars', handle.engine);
+app.set('view engine', 'handlebars')
 
 app.use(routes);
 
