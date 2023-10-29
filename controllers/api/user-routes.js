@@ -30,14 +30,14 @@ router.post('/logout', Auth, (req, res) => {
 
 // delete user
 
-(router.delete('/:id', Auth, (req, res) => {
+router.delete('/:id', Auth, (req, res) => {
   User.destroy({
     where: {
       id: req.params.id
       }
   })
-    .then(dbUserData) => {
-      id(!dbUserData) {
+    .then(dbUserData => {
+      if(!dbUserData) {
         res.status(404).json({ message: 'theres no user with that id!' });
         return;
       }

@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const { User, Post, Comment} = require('../../models')
-const Auth = require('../../util/Auth')
+const Auth = require('../../util/authcheck')
 
 // get every comment
 router.get('/', (req, res) => {
@@ -21,7 +21,7 @@ router.get('/:id', (req, res) => {
   })
   .then(dbCommentData => {
     if(!dbCommentData) {
-      res.status(404).json({ message: 'no comment with that id"});
+      res.status(404).json({ message: 'no comment with that id'});
         return;
     };
       res.json(dbCommentData)
@@ -65,7 +65,8 @@ router.post('/', Auth, (req, res) => {
   )
   .then(dbCommentData => res.json(dbCommentData))
   .catch(err => {
-    console.log(err)res.status(500).json(err);
+    console.log(err)
+    res.status(500).json(err);
   });
 });
 
