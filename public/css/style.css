@@ -1,0 +1,116 @@
+body, html {
+    height: 100%;
+    font-family: monospace;
+    color: white;
+}
+
+a{
+    color: navy;
+    font-weight: bold;
+    transition: color .3s;
+}
+
+nav a {
+    margin: 0 20px;
+    color: white;
+}
+
+button {
+    background-color: darkgrey;
+    width: 40%;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.post-list{
+    margin: 0;
+    padding: 0;
+}
+
+textarea, input {
+    width: 40%;
+    border-radius: 5px;
+}
+
+textarea{
+    min-width: 40%;
+    min-height: 100px;
+}
+
+form > div {
+    font-weight: bold;
+}
+
+form label {
+    display: block;
+}
+
+.wrapper{
+    width: 100%;
+    min-height: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #41517d;
+}
+
+header h1 {
+    font-size: 2em;
+    color: white;
+}
+
+main {
+    flex: 1;
+}
+
+li {
+    list-style-type: none;
+}
+
+.btn-no-style{
+    color: white;
+    background: none;
+    font-size: 100%;
+}
+
+nav button {
+    margin: 0 20px;
+}
+
+.delete-post-btn{
+    background-color: #d41414;
+}
+
+.post{
+    margin-bottom: 2%;
+    line-height: 150%;
+    padding-bottom: 3%;
+}
+
+.edit-link{
+    display: block;
+}
+
+.new-post-form input{
+    width: 300px;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    font-size: italic;
+    font-size: 110;
+}
+
+.edit-button-div{
+    display: flex;
+    flex-direction: column;
+}
