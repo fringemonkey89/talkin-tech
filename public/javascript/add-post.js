@@ -1,4 +1,5 @@
 async function newForm (event) {
+  event.preventDefault();
   const title = document.querySelector('').value;
   const content = document.querySelector('').value;
 

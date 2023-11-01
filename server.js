@@ -2,6 +2,7 @@ const express = require('express');
 const routes = require('./controllers');
 const sequelize = require('./config/connection');
 const path = require('path');
+const cors = require('cors')
 
 const exHb = require('express-handlebars')
 const helpers = require('./util/helper');
@@ -30,6 +31,8 @@ app.use(express.static(path.join(__dirname, 'public')))
 
 app.engine('handlebars', handle.engine);
 app.set('view engine', 'handlebars')
+
+app.use(cors())
 
 app.use(routes);
 

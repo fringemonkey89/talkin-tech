@@ -5,10 +5,10 @@ async function deleteForm (event) {
   const id = window.location.toString().split('/')[
     window.location.toString().split('/').length -1];
   
-  const repsonse = await fetch(`/api/posts/${id}`, {
+  const response = await fetch(`/api/posts/${id}`, {
     method: 'DELETE'
   });
-    if(repsonse.ok) {
+    if(response.ok) {
       document.location.replace('/profile')
     } else {
       alert(response.statusText);
