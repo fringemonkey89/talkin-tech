@@ -16,7 +16,8 @@
                 <a href="/"> Home </a>
                  <a href="/profile"> Dashboard </a>
                  {{#if loggedIn }}
-                 <button id="logout" class="btn">logout</button>
+                 <button id="logout" class="btn">logout
+                 </button>
                  {{else}}
                  <a href="/login"> Login </a>
                  {{/if}}
@@ -29,9 +30,11 @@
             Website by M.M
         </footer>
 
+
         {{#if loggedIn}}
         <script src="../../public/javascript/logout.js"></script>
-        {{/if}}
+       {{/if}} 
     </div>
 </body>
 </html>
+<script src="../../public/javascript/logout.js"></script>
